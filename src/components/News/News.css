@@ -1,0 +1,26 @@
+.news_block {
+    margin-bottom: 50px;
+}
+
+.list-group-item {
+    text-align: left;
+    color: white;
+    background-color: #1C2331;
+}
+
+.list-group-item:hover {
+    background-color:#F04539;
+    color: white;
+}
+
+.list-group-item.active {
+    border-color: transparent;
+}
+
+small {
+    color: grey;
+}
+
+.list-group-item:hover small {
+    color: white;
+}
