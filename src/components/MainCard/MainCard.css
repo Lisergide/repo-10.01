@@ -1,0 +1,8 @@
+.jumbotron {
+    margin-top: 100px;
+    background: url(cloud-bkg.png) no-repeat #fff;
+}
+
+.display-3, .lead, p {
+    color: #1C2331;
+}
