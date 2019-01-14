@@ -6,6 +6,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMemory, faServer, faHdd } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from 'components/Footer';
+import FooterPage from 'components/Footer2';
+
 
 library.add(faMemory, faServer, faHdd)
 
@@ -20,6 +22,7 @@ export default class App extends PureComponent {
                     <Main />
                 </main>
                 <Footer />
+                <FooterPage />
             </div>
         );
     }

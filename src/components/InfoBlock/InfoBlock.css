@@ -3,6 +3,6 @@
     margin-bottom: 20px;
 }
 
-.label {
+.ui.statistic>.label {
     font-weight: 200;
 }

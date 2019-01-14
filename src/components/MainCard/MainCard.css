@@ -1,8 +1,15 @@
 .jumbotron {
     margin-top: 100px;
-    background: url(cloud-bkg.png) no-repeat #fff;
+    background: url(acloud_logo_white.svg) 890px 102px no-repeat #1C2331;
+    background-size: 20%;
+    padding: 2rem 2rem;
 }
 
 .display-3, .lead, p {
-    color: #1C2331;
+    color: #fff;
+}
+
+.btn {
+    font-size: 1.25rem;
+    font-weight: 500;
 }

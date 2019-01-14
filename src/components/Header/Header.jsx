@@ -1,7 +1,8 @@
-import { MDBCollapse, MDBContainer, MDBIcon, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink } from 'mdbreact';
+import { MDBCollapse, MDBContainer, MDBIcon, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Fa } from 'mdbreact';
 import React, { PureComponent } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import logo from './icon_bank-alfa_l_white.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import logo from './acloud_logo_header.svg';
 import './Header.css';
 
 class FixedNavbarExample extends PureComponent {
@@ -20,6 +21,7 @@ class FixedNavbarExample extends PureComponent {
 
     render() {
         const bgDark = { backgroundColor: '#1C2331' }
+        const fSize = { fontSize: '1.2rem', fontWeight: 'bold' }
         return (
             <div>
                 <Router>
@@ -28,8 +30,7 @@ class FixedNavbarExample extends PureComponent {
                         <MDBNavbar style={bgDark} dark expand="md" scrolling fixed="top">
                             <MDBContainer>
                                 <MDBNavbarBrand href="/">
-                                    <img src={logo} alt="alfa" />
-                                    <strong>Cloud</strong>
+                                    <img className="logo" src={logo} alt="alfa" />
                                 </MDBNavbarBrand>
                                 <MDBNavbarToggler onClick={this.onClick} />
                                 <MDBCollapse isOpen={this.state.collapse} navbar>
@@ -61,7 +62,18 @@ class FixedNavbarExample extends PureComponent {
                                             <MDBNavLink to="#"><MDBIcon icon="cog" /></MDBNavLink>
                                         </MDBNavItem>
                                         <MDBNavItem>
-                                            <MDBNavLink to="#"><MDBIcon icon="info-circle" /></MDBNavLink>
+                                        <Dropdown>
+                                            <DropdownToggle nav>
+                                                    <MDBIcon icon="info-circle" />
+                                            </DropdownToggle>
+                                            <DropdownMenu className="dropdown-default" right>
+                                                    <DropdownItem style={fSize} href="#!">Пользователей: 758 <Fa icon="user" /></DropdownItem>
+                                                    <DropdownItem style={fSize} href="#!">Серверов: 31,107 <FontAwesomeIcon icon="server" /></DropdownItem>
+                                                    <DropdownItem style={fSize} href="#!">Используется CPU: 2,437 <Fa icon="microchip" /></DropdownItem>
+                                                    <DropdownItem style={fSize} href="#!">Используется RAM: 8,415 GB <FontAwesomeIcon icon="memory" /></DropdownItem>
+                                                    <DropdownItem style={fSize} href="#!">Используется HDD: 102,882 GB <FontAwesomeIcon icon="hdd" /></DropdownItem>
+                                            </DropdownMenu>
+                                        </Dropdown>
                                         </MDBNavItem>
                                     </MDBNavbarNav>
                                 </MDBCollapse>
