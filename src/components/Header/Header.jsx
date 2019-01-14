@@ -1,7 +1,7 @@
 import { MDBCollapse, MDBContainer, MDBIcon, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink } from 'mdbreact';
 import React, { PureComponent } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import logo from './icon_bank-alfa_l_white.svg';
+import logo from './acloud_logo_header.svg';
 import './Header.css';
 
 class FixedNavbarExample extends PureComponent {
@@ -28,8 +28,7 @@ class FixedNavbarExample extends PureComponent {
                         <MDBNavbar style={bgDark} dark expand="md" scrolling fixed="top">
                             <MDBContainer>
                                 <MDBNavbarBrand href="/">
-                                    <img src={logo} alt="alfa" />
-                                    <strong>Cloud</strong>
+                                    <img className="logo" src={logo} alt="alfa" />
                                 </MDBNavbarBrand>
                                 <MDBNavbarToggler onClick={this.onClick} />
                                 <MDBCollapse isOpen={this.state.collapse} navbar>
