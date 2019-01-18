@@ -2,8 +2,9 @@ import React from 'react';
 import { Progress } from 'reactstrap';
 
 const MyProgressBar = (props) => {
+    const size = { width: '250px'}
     return (
-        <div>
+        <div style={size}> 
             <div className="text-center">Used_VCPU/VCPU</div>
             <Progress multi>
                 <Progress bar animated color="success" value="100">Всего: 4 Использовано: 4</Progress>

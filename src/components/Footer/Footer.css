@@ -1,9 +1,17 @@
-.footer {
+.page-footer {
     background-color: #1C2331;
     color: #B5BBC2;
+    margin-left: 0;
 }
 
-.footer a {
-    text-decoration: none;
-    color: #B5BBC2;
+.mt-4 {
+    margin-top: 0!important;
+}
+
+.info__line {
+    font-size: 1rem;
+}
+
+.footer-copyright {
+    font-size: 1rem;
 }

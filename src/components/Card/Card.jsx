@@ -7,7 +7,10 @@ import './Card.css';
 
 const CardSection = () => {
     return (
-        <Row className="mb-4 mt-4">
+        <div>
+            <h3>Название плана: <span className="plan_title">Plan189_DEMO</span> || Ваша Роль: <span className="plan_user">Владелец</span></h3>
+        
+        <Row className="mb-4 mt-5">
             <Col xl="4" md="6" className="mb-r">
                 <Card className="cascading-admin-card">
                     <div className="admin-up">
@@ -75,6 +78,7 @@ const CardSection = () => {
                 </Card>
             </Col>
         </Row>
+        </div>
     )
 }
 

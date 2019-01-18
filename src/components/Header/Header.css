@@ -10,3 +10,8 @@ margin-top: 10px;
 .dropdown-menu a {
     font-size: 2rem;
 }
+
+.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 0.2rem solid #fff;
+}

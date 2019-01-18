@@ -1,30 +1,26 @@
-import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
 import React, { PureComponent } from 'react';
-import SimpleCard from '../News';
-import SimpleTabs from '../TabsPage';
-import './Main.css';
-import MainCard from '../MainCard';
-import StatisticExampleGroup from '../InfoBlock';
+import { MDBContainer, MDBRow } from 'mdbreact';
+import SimpleCard from 'components/News';
+import SimpleTabs from 'components/TabsPage';
+import MainCard from 'components/MainCard';
 import Slider from 'react-slick';
 
-export default class Main extends PureComponent {
-
+export default class HomeContainer extends PureComponent {
     render() {
         const settings = {
-            dots: true,
+            dots: false,
             infinity: true,
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 4
         };
         return (
-            <main>
-                <MainCard />
-                <StatisticExampleGroup />
+            <div>
                 <MDBContainer>
-                    <h2 className="resources_title">Мои ресурсы в облаке</h2>
+                    <MainCard />
+                    <h2 className="resourse_title">Мои ресурсы в облаке</h2>
                     <SimpleTabs />
-                    <h2 className="resources_title">Новости</h2>
+                    <h2 className="resourse_title">Новости</h2>
                     <MDBRow>
                         <Slider {...settings}>
                             <SimpleCard />
@@ -36,7 +32,7 @@ export default class Main extends PureComponent {
                         </Slider>
                     </MDBRow>
                 </MDBContainer>
-            </main>
+            </div>
         )
     }
 }

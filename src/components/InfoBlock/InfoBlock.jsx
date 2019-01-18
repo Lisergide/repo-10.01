@@ -10,7 +10,7 @@ const StatisticExampleGroup = () => (
                 <Statistic.Label>Пользователей</Statistic.Label>
             </Statistic>
             <Statistic>
-                <Statistic.Value>31,703</Statistic.Value>
+                <Statistic.Value>699</Statistic.Value>
                 <Statistic.Label>Сервера</Statistic.Label>
             </Statistic>
             <Statistic>

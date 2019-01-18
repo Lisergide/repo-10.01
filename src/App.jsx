@@ -1,29 +1,36 @@
 import React, { PureComponent } from 'react'
-
-import Main from 'components/Main';
 import FixedNavbarExample from 'components/Header';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMemory, faServer, faHdd } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Footer from 'components/Footer';
-import FooterPage from 'components/Footer2';
+import FooterPage from 'components/Footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import routes from './routes';
+import './App.css';
 
 
 library.add(faMemory, faServer, faHdd)
 
 export default class App extends PureComponent {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
-            <div>
-                <header className="header">
-                    <FixedNavbarExample />
-                </header>
-                <main className="main">
-                    <Main />
-                </main>
-                <Footer />
-                <FooterPage />
-            </div>
+            <Router>
+                <div className="root_content">
+                    <header className="header">
+                        <FixedNavbarExample />
+                    </header>
+                    <main className="content p-5">
+                        <Switch>
+                            {routes.map((route, idx) => <Route key={idx} {...route} />)}
+                        </Switch>
+                    </main>
+                    <FooterPage />
+                </div>
+            </Router>
         );
     }
 }

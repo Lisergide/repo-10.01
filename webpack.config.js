@@ -12,7 +12,10 @@ module.exports = {
   },
   resolve: {
     alias: {
+      actions: path.resolve(__dirname, 'src', 'actions'),
+      reducers: path.resolve(__dirname, 'src', 'reducers'),
       components: path.resolve(__dirname, 'src', 'components'),
+      containers: path.resolve(__dirname, 'src', 'containers'),
     },
     extensions: ['.js', '.jsx'],
   },
@@ -53,6 +56,9 @@ module.exports = {
       ]
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new ExtractTextPlugin({
