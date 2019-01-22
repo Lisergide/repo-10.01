@@ -10,7 +10,7 @@ const MainCard = (props) => {
                 <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
                 <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                 <p className="lead">
-                    <Button color="danger">Попробовать новое облако</Button>
+                    <Button className="main_card_btn" color="danger">Попробовать новое облако</Button>
                 </p>
             </Jumbotron>
         </div>

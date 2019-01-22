@@ -7,6 +7,7 @@ import 'mdbreact/dist/css/mdb.css';
 import 'typeface-roboto';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'react-input-range/lib/css/index.css';
 import './index.css';
 import App from './App';
 

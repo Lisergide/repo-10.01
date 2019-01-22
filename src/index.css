@@ -41,14 +41,14 @@ code {
 }
 
 .content {
-    background-color: #282c34;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     font-size: calc(7px + 1vmin);
-     color: white;
-     flex: 1;
+    background: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(7px + 1vmin);
+    color: white;
+    flex: 1;
 }
 
 .slick-list {
@@ -179,6 +179,12 @@ code {
 
     .card.cascading-admin-card {
         margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 994px) {
+    .info__line_name {
+        display: none;
     }
 }
 

@@ -5,10 +5,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import { MDBInput, MDBBtn } from 'mdbreact';
 import ControlledExpansionPanels from '../Accordion';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import MyProgressBar from '../ProgressBar';
 import CardSection from '../Card';
+
 
 const dark = { backgroundColor: '#1C2331', color: '#fff' };
 
@@ -59,18 +61,26 @@ class SimpleTabs extends PureComponent {
         return (
             <div className={classes.root}>
                 <MuiThemeProvider theme={theme}>
-                <AppBar position="static">
-                    <Tabs value={value} onChange={this.handleChange} style={dark}>
-                        <Tab label="Тестовый ACloud" />
-                        <Tab label="Промышленный ACloud" />
-                        <Tab label="Внешнее облако" />
-                        <Tab label="Файловое облако" />
-                    </Tabs>
-                </AppBar>
+                    <AppBar position="static">
+                        <Tabs value={value} onChange={this.handleChange} style={dark}>
+                            <Tab label="Тестовый ACloud" />
+                            <Tab label="Промышленный ACloud" />
+                            <Tab label="Внешнее облако" />
+                            <Tab label="Файловое облако" />
+                        </Tabs>
+                    </AppBar>
                     {value === 0 && <TabContainer><CardSection /></TabContainer>}
-                    {value === 1 && <TabContainer><MyProgressBar /></TabContainer>}
-                    {value === 2 && <TabContainer><ControlledExpansionPanels /></TabContainer>}
-                {value === 3 && <TabContainer>Файловое облако</TabContainer>}
+                    {value === 1 && <TabContainer><CardSection /></TabContainer>}
+                    {value === 2 && <TabContainer><CardSection /></TabContainer>}
+                    {value === 3 && <TabContainer>
+                            <h2 className="file_cloud_title">Файловое облако</h2>
+                            <form action="#">
+                                <div>
+                                    <MDBInput hint="Введите название папки" className="file_cloud_input" />
+                                    <MDBBtn color="danger">Создать</MDBBtn>
+                                </div>
+                            </form>
+                    </TabContainer>}
                 </MuiThemeProvider>
             </div>
         );
