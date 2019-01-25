@@ -5,3 +5,8 @@
 .plan_user {
     color: #EF3124;
 }
+
+.admin-up .data p {
+    color: black;
+    font-size: 1rem;
+}

@@ -8,6 +8,7 @@ import 'typeface-roboto';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'react-input-range/lib/css/index.css';
+import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import './index.css';
 import App from './App';
 

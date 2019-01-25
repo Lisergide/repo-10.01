@@ -12,8 +12,16 @@
     min-height: 344px;
 }
 
+.make_file_cloud_2 {
+    min-height: 333px;
+}
+
 .plan_name_header {
     font-size: 14px;
+}
+
+button:focus {
+    outline: none;
 }
 
 .subs_content {
@@ -28,6 +36,53 @@
     border-radius: 5px;
     color: #fff;
     text-align: center;
+}
+
+.subs_block_left {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: #1C2331;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    min-height: 247px;
+}
+
+.subs_block_title {
+    padding-top: 2rem;
+}
+
+.subs_block_right {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: #1C2331;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.link_t-it_0459 {
+    color: #ff4444;
+    font-size: 14px;
+}
+
+.link_t-it_0459:hover {
+    color: #fff;
+}
+
+.subs_instruction_link {
+    color: #ff4444;
+}
+
+.subs_instruction_link:hover {
+    color: #fff;
+}
+
+.card_section_block {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding: 2px;
 }
 
 .prom_acloud_title > div {
@@ -114,6 +169,6 @@ color: #fff;
 }
 
 .folder_logo {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }

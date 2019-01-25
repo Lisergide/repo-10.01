@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MyProgressBar from 'components/ProgressBar';
 import ModalMakeVM from 'components/ModalMakeVM';
 import folderLogo from '../folder_solid_acloud.svg';
+import SubsTabsPage from 'components/SubsTabsPage';
 
 
 export default class SubscribeContainer extends PureComponent {
@@ -11,6 +12,9 @@ export default class SubscribeContainer extends PureComponent {
         return (
             <div className="subs_content">
                 <MDBContainer>
+                    <MDBRow>
+                        <SubsTabsPage />
+                    </MDBRow>
                     <MDBRow className="subs_row">
                         <MDBCol md="4">
                             <div className="subs_block">
@@ -33,7 +37,6 @@ export default class SubscribeContainer extends PureComponent {
                                                 <li>Промышленное облако не предназначено для размещения серверов баз данных и файловых хранилищ.</li>
                                                 <a href="http://confluence.moscow.alfaintra.net/pages/viewpage.action?pageId=178240131">Инструкции по заказу облака.</a> 
                                             </ol>
-                                            
                                         </MDBPopoverBody>
                                     </MDBPopover>
                                 </h2>
